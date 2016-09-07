@@ -13,6 +13,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       options: {
+        validthis: true,
         predef: [ "document", "console" ],
         esnext: true,
         globalstrict: true,
