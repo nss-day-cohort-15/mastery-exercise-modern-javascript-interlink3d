@@ -2,9 +2,11 @@
 
 console.log("hello Edgar");
 
-// let classes = require(robotClasses.js),
-//     selection = require(robotSelection.js),
-//     dom = require(interactions.js);
+let $ = require("jquery"),
+    classes = require("./robotClasses"),
+    selection = require("./robotSelection"),
+    dom = require("./interactions");
+
 
 
 

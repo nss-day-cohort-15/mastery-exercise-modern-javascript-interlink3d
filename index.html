@@ -2,21 +2,74 @@
 <html>
 <head>
   <title>DoomsDay BattleBots</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
   <header><h1>DoomsDay BattleBots!!</h1></header>
-
-  <div class="container">
-  <div>
-    testing git commands after reconfig.
-  </div>
-
-
-  </div>
+<br>
+<br>
+  <div class="container-fluid">
+    <div class="battlefield">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="player1 col-md-3">
+          <input type="text" id="player1input" placeholder="Your Name">
+          <br>
+          <br>
+          <button class="submit1">I am Me</button>
+            <br>
+            <br>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Your Class
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="1">
+                  <li><a href="#">Fighter Drone</a></li>
+                  <li><a href="#">Sharpshooter Drone</a></li>
+                  <li><a href="#">Armed Frankenstein</a></li>
+                  <li><a href="#">Wrestling Frankenstein</a></li>
+                  <li><a href="#">Ground Tank</a></li>
+                  <li><a href="#">Amphibious Tank</a></li>
+                </ul>
+              </div>
+            <br>
+            <br>
+          <div class="player1display"></div>
+        </div> <!-- end player 1 -->
+        <div class="player2 col-md-3">
+          <input type="text" id="player2input" placeholder="Enemy's Name">
+            <br>
+            <br>
+          <button class="submit2">I am Enemy</button>
+            <br>
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Enemy Class
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="2">
+                  <li><a href="#">Fighter Drone</a></li>
+                  <li><a href="#">Sharpshooter Drone</a></li>
+                  <li><a href="#">Armed Frankenstein</a></li>
+                  <li><a href="#">Wrestling Frankenstein</a></li>
+                  <li><a href="#">Ground Tank</a></li>
+                  <li><a href="#">Amphibious Tank</a></li>
+                </ul>
+              </div>
+            <br>
+            <br>
+          <div class="player2display"></div>
+        </div> <!-- end player 2 -->
+        <div class="col-md-3"></div>
+      </div> <!-- end row -->
+    </div> <!-- end battlefield -->
+  </div> <!-- end container -->
 
   <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="dist/app.js" type='text/javascript'></script>
 </body>
 </html>
