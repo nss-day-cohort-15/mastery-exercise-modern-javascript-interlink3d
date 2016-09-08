@@ -19,7 +19,7 @@ function randomDamage(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-player = new classes.Robot();
-enemy = new classes.Robot();
+// player = new classes.Robot();
+// enemy = new classes.Robot();
 
 module.exports = {randomHealth, randomDamage};

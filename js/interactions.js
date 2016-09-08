@@ -4,23 +4,27 @@ let $ = require("jquery"),
     classes = require("./robotClasses"),
     selection = require("./robotSelection");
 
-let PlayerName1 = "",
-    PlayerName2 = "";
+let playerName1 = "",
+    playerRobot1 = null,
+    playerName2 = "",
+    playerRobot2 = null;
 
-// name bot 1
+// name and type selected bot 1
   $(".submit1").click(function(e) {
 
-  PlayerName1 = $("#player1input").val();
-  $('.player1display').html(PlayerName1);
-  console.log(PlayerName1);
-  // PlayerName1 = new classes.Robot();
+  playerName1 = $("#player1input").val();
+  $('.player1display').html(playerName1);
+  console.log(playerName1);
+  playerRobot1 = $("#playerRobot1").val();
+  console.log(playerRobot1);
   });
 
-// name bot 2
+// name and type selected bot 2
   $(".submit2").click(function(e) {
 
-  PlayerName2 = $("#player2input").val();
-  $('.player2display').html(PlayerName2);
-  console.log(PlayerName2);
-  // PlayerName2 = new classes.Robot();
+  playerName2 = $("#player2input").val();
+  $('.player2display').html(playerName2);
+  console.log(playerName2);
+  playerRobot2 = $("#playerRobot2").val();
+  console.log(playerRobot2);
   });
