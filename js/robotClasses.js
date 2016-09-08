@@ -1,35 +1,30 @@
 "use strict";
 
-let $ = require("jquery");
+let $ = require("jquery"),
+    selection = require("./robotSelection");
 
   function Robot () {
     this.name = "";
-    this.health = 0;
-    this.damage = 0;
-
-    this.toString = function() {
-      return this.name;
-    };
-
-    console.log("robot object", Robot);
+    this.style = null;
+    this.type = null;
+    this.health = 50;
+    this.damage = 50;
+    // console.log("robot object", Robot);
   }
 
-  // 3 classes for Robot - Drone, Frankenstein, Tank
+  // 3 styles for Robot - Drone, Frankenstein, Tank
   function Drone () {
-    this.health = 20;
-    this.damage = 30;
+    this.style = "Drone";
   }
   Drone.prototype = new Robot();
 
   function Frankenstein () {
-    this.health = 30;
-    this.damage = 20;
+    this.style = "Frankenstein";
   }
   Frankenstein.prototype = new Robot();
 
   function Tank () {
-    this.health = 40;
-    this.damage = 10;
+    this.style = "Tank";
   }
   Tank.prototype = new Robot();
 
@@ -39,45 +34,45 @@ let $ = require("jquery");
       // Tank: ground and amphibious
 
   function fighter () {
-    this.name = "fighter";
-    this.health = +10;
-    this.damage = +5;
+    this.type = "fighter";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   fighter.prototype = new Drone();
 
   function sharpshooter () {
-    this.name = "sharpshooter";
-    this.health = +5;
-    this.damage = +10;
+    this.type = "sharpshooter";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   sharpshooter.prototype = new Drone();
 
   function armed () {
-    this.name = "armed";
-    this.health = +5;
-    this.damage = +15;
+    this.type = "armed";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   armed.prototype = new Frankenstein();
 
   function wrestler () {
-    this.name = "wrestler";
-    this.health = +10;
-    this.damage = +10;
+    this.type = "wrestler";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   wrestler.prototype = new Frankenstein();
 
   function ground () {
-    this.name = "ground";
-    this.health = +5;
-    this.damage = +10;
+    this.type = "ground";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   ground.prototype = new Tank();
 
   function amphibious () {
-    this.name = "amphibious";
-    this.health = +15;
-    this.damage = +5;
+    this.type = "amphibious";
+    this.health = selection.randomHealth();
+    this.damage = selection.randomDamage();
   }
   amphibious.prototype = new Tank();
 
-module.exports = (fighter, sharpshooter, armed, wrestler, ground, amphibious);
+module.exports = {Robot, Drone, Frankenstein, Tank, fighter, sharpshooter, armed, wrestler, ground, amphibious};

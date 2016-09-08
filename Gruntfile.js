@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       options: {
-        validthis: true,
+        validthis: true,  // this allows for a global this to be used without throwing errors
         predef: [ "document", "console" ],
         esnext: true,
         globalstrict: true,
